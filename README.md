@@ -42,7 +42,7 @@ The purpose of this project is to apply and review key API concepts such as cont
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/
+   git clone https://github.com/DeVFirmino/DevFreela
    ```
 2. **Navigate to the project folder:**
    ```bash
