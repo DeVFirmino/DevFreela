@@ -35,7 +35,7 @@ The purpose of this project is to apply and review key API concepts such as cont
 
 ### Prerequisites
 
-- .NET SDK (version 9.0 or higher)
+- .NET SDK  
 - Code editor (Visual Studio, Rider, VS Code etc.)
 
 ### Steps
