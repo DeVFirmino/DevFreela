@@ -1,0 +1,56 @@
+# Build and VS/JetBrains/VSCode junk
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+.vs/
+.idea/
+.ReSharper*/
+*.DotSettings.user
+
+# Rider specific
+/.idea/
+/.idea
+
+# Rider settings and caches
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# Others
+*.log
+**/*~ 
+*.tmp
+
+# Mac system files
+.DS_Store
+
+# NuGet
+*.nupkg
+packages/
+
+# local appsettings (often)
+appsettings.*.local.json
+
+# Test results
+TestResults/
+*.VisualState.xml
+*.TestAdapter.dll
+*.TestFramework.dll
+
+# Coverage
+coverage*.json
+coverage*.xml
+coverage*.info
+coverage*.lcov
+coverage*.cov
+coverage*.cover
+
+# Publish output
+publish/
+
+# Node (if used anywhere)
+node_modules/
