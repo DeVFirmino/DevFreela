@@ -2,7 +2,6 @@ using DevFreela.Controllers.Models;
 using DevFreela.Models;
 using DevFreela.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
 
 namespace DevFreela.Controllers;
 
@@ -13,19 +12,11 @@ public class ProjectController : ControllerBase
 {
         private readonly FreelanceTotalCostConfig _config;
         private readonly IConfigService _configService;
-        
-        public ProjectController(
-                IOptions<FreelanceTotalCostConfig> options,
-                IConfigService configService)
-        {
-                _config = options.Value;
-                _configService = configService;
-        }
-        
+
         [HttpGet]
         public IActionResult Get(string search = "")
         {
-                return Ok(_configService.GetValue());
+                return Ok();
         }
         
         // GET api/projects/1234
@@ -39,10 +30,7 @@ public class ProjectController : ControllerBase
         [HttpPost()]
         public IActionResult Post(CreateProjectInputModel model)
         {
-                if (model.TotalCost < _config.Minimum || model.TotalCost > _config.Maximum)
-                {
-                        return BadRequest("Number out of range");
-                } 
+                
                 return CreatedAtAction(nameof(GetById), new{id = 1}, model);
         } 
         

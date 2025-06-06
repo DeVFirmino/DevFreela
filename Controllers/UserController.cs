@@ -10,9 +10,15 @@ public class UserController : ControllerBase
 {
     
     [HttpPost] //cadastro users
-    public IActionResult Post()
+    public IActionResult Post(CreateUserInputModel model)
     {
         return Ok();
+    }
+
+    [HttpPost("{id}/skills")]
+    public IActionResult PostSkills(UserSkillsInputModel model)
+    {
+        return NoContent();
     }
 
     [HttpPost("{id}/profile-picture")]

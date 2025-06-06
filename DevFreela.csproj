@@ -8,12 +8,28 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.4"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.5"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.5"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.5"/>
         <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="8.1.4" />
         <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="8.1.4" />
     </ItemGroup>
 
     <ItemGroup>
       <Compile Remove="Models\ProfilePictureInputModel.cs" />
+        <Compile Remove="Enums\ProjectStatusEnum.cs\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <EmbeddedResource Remove="Enums\ProjectStatusEnum.cs\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Remove="Enums\ProjectStatusEnum.cs\**"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Enums\ProjectStatusEnum.cs\**"/>
     </ItemGroup>
 
 </Project>
